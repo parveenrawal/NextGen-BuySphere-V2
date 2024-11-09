@@ -19,15 +19,15 @@ const OrderList = () => {
         <table className="container mx-auto">
           <AdminMenu />
 
-          <thead className="w-full border">
+          <thead className="w-full bg-green-500">
             <tr className="mb-[5rem]">
-              <th className="text-left pl-1">ITEMS</th>
-              <th className="text-left pl-1">ID</th>
-              <th className="text-left pl-1">USER</th>
-              <th className="text-left pl-1">DATA</th>
-              <th className="text-left pl-1">TOTAL</th>
-              <th className="text-left pl-1">PAID</th>
-              <th className="text-left pl-1">DELIVERED</th>
+              <th className="text-center pl-1 p-5 text-xl">ITEMS</th>
+              <th className="text-left pl-1 p-5 text-xl">ID</th>
+              <th className="text-left pl-1 p-5 text-xl">USER</th>
+              <th className="text-left pl-1 p-5 text-xl">DATA</th>
+              <th className="text-left pl-1 p-5 text-xl">TOTAL</th>
+              <th className="text-left pl-1 p-5 text-xl">PAID</th>
+              <th className="text-left pl-1 p-5 text-xl">DELIVERED</th>
               <th></th>
             </tr>
           </thead>
@@ -54,11 +54,11 @@ const OrderList = () => {
 
                 <td className="py-2">
                   {order.isPaid ? (
-                    <p className="p-1 text-center bg-green-400 w-[6rem] rounded-full">
+                    <p className="p-1 text-center bg-green-500 w-[6rem] rounded-full">
                       Completed
                     </p>
                   ) : (
-                    <p className="p-1 text-center bg-red-400 w-[6rem] rounded-full">
+                    <p className="p-1 text-center bg-red-500 w-[6rem] rounded-full">
                       Pending
                     </p>
                   )}
@@ -66,11 +66,11 @@ const OrderList = () => {
 
                 <td className="px-2 py-2">
                   {order.isDelivered ? (
-                    <p className="p-1 text-center bg-green-400 w-[6rem] rounded-full">
+                    <p className="p-1 text-center bg-green-500 w-[6rem] rounded-full">
                       Completed
                     </p>
                   ) : (
-                    <p className="p-1 text-center bg-red-400 w-[6rem] rounded-full">
+                    <p className="p-1 text-center bg-red-500 w-[6rem] rounded-full">
                       Pending
                     </p>
                   )}

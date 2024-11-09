@@ -65,10 +65,10 @@ const ProductDetails = () => {
 
   return (
     <>
-      <div>
+      <div className="mt-[5rem]">
         <Link
           to="/"
-          className="text-white font-semibold hover:underline ml-[10rem]"
+          className="text-white text-2xl font-semibold hover:underline ml-[10rem]"
         >
           Go Back
         </Link>
@@ -82,20 +82,21 @@ const ProductDetails = () => {
         </Message>
       ) : (
         <>
-          <div className="flex flex-wrap relative items-between mt-[2rem] ml-[10rem]">
-            <div>
+          <div className="w-[110rem] m-auto">
+          <div className="flex flex-row justify-around mt-[2rem] ml-[10rem]">
+            <div className="w-[30rem]">
               <img
                 src={product.image}
                 alt={product.name}
                 className="w-full xl:w-[50rem] lg:w-[45rem] md:w-[30rem] sm:w-[20rem] mr-[2rem]"
               />
-
-              <HeartIcon product={product} />
+              {/* <HeartIcon product={product} /> */}
             </div>
 
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col w-[60rem] justify-between">
+
               <h2 className="text-2xl font-semibold">{product.name}</h2>
-              <p className="my-4 xl:w-[35rem] lg:w-[35rem] md:w-[30rem] text-[#B0B0B0]">
+              <p className="my-4 xl:w-[55rem] lg:w-[35rem] md:w-[30rem] text-[#B0B0B0]">
                 {product.description}
               </p>
 
@@ -159,26 +160,16 @@ const ProductDetails = () => {
                 <button
                   onClick={addToCartHandler}
                   disabled={product.countInStock === 0}
-                  className="bg-pink-600 text-white py-2 px-4 rounded-lg mt-4 md:mt-0"
+                  className="bg-green-500 text-white py-2 px-4 rounded-lg mt-4 md:mt-0"
                 >
                   Add To Cart
                 </button>
               </div>
             </div>
 
-            <div className="mt-[5rem] container flex flex-wrap items-start justify-between ml-[10rem]">
-              <ProductTabs
-                loadingProductReview={loadingProductReview}
-                userInfo={userInfo}
-                submitHandler={submitHandler}
-                rating={rating}
-                setRating={setRating}
-                comment={comment}
-                setComment={setComment}
-                product={product}
-              />
-            </div>
           </div>
+          </div>
+          
         </>
       )}
     </>
