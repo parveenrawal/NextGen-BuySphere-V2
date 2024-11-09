@@ -190,7 +190,7 @@ const ProductList = () => {
 
               <button
                 type="submit"
-                className="py-4 px-10 mt-5 rounded-lg text-lg font-bold bg-pink-600"
+                className="py-4 px-10 mt-5 rounded-lg text-lg font-bold bg-green-600"
               >
                 Submit
               </button>

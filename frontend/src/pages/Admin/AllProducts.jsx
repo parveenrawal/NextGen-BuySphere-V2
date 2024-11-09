@@ -22,7 +22,7 @@ const AllProducts = () => {
             <div className="ml-[2rem] text-xl font-bold h-12">
               All Products ({products.length})
             </div>
-            <div className="flex flex-wrap justify-around items-center">
+            <div className="flex flex-wrap items-center w-[60] mb-8">
               {products.map((product) => (
                 <Link
                   key={product._id}
@@ -46,14 +46,14 @@ const AllProducts = () => {
                         </p>
                       </div>
 
-                      <p className="text-gray-400 xl:w-[30rem] lg:w-[30rem] md:w-[20rem] sm:w-[10rem] text-sm mb-4">
+                      <p className="text-gray-400 xl:w-[50rem] lg:w-[30rem] md:w-[20rem] sm:w-[10rem] text-sm mb-4">
                         {product?.description?.substring(0, 160)}...
                       </p>
 
                       <div className="flex justify-between">
                         <Link
                           to={`/admin/product/update/${product._id}`}
-                          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-pink-700 rounded-lg hover:bg-pink-800 focus:ring-4 focus:outline-none focus:ring-pink-300 dark:bg-pink-600 dark:hover:bg-pink-700 dark:focus:ring-pink-800"
+                          className="inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 "
                         >
                           Update Product
                           <svg
@@ -72,7 +72,7 @@ const AllProducts = () => {
                             />
                           </svg>
                         </Link>
-                        <p>$ {product?.price}</p>
+                        <p className="text-green-500 font-bold text-2xl">$ {product?.price}</p>
                       </div>
                     </div>
                   </div>
