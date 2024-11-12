@@ -72,7 +72,7 @@ const AllProducts = () => {
                             />
                           </svg>
                         </Link>
-                        <p className="text-green-500 font-bold text-2xl">$ {product?.price}</p>
+                        <p className="text-green-500 font-bold text-2xl">MRP {product?.price}</p>
                       </div>
                     </div>
                   </div>
