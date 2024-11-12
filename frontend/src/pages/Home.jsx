@@ -86,16 +86,16 @@ const Home = () => {
         <span className="text-6xl text-white font-bold">Category</span>
         <div className="bnrBox">
           <div style={{ backgroundImage: "url('/img/laptop.webp')" }}>
-            <span>Data</span>
+            <span>LAPTOP</span>
           </div>
           <div style={{ backgroundImage: "url('/img/graphic-card.jpg')" }}>
-            <span>Data</span>
+            <span>GPU</span>
           </div>
           <div style={{ backgroundImage: "url('img/motherboard.jpg')" }}>
-            <span>Data</span>
+            <span>MOTHERBOARD</span>
           </div>
           <div style={{ backgroundImage: "url('/img/mouse.avif')" }}>
-            <span>Data</span>
+            <span>MOUSE & KEYBOARD</span>
           </div>
         </div>
       </section>
