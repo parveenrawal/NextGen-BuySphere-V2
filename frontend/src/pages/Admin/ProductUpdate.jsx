@@ -72,42 +72,84 @@ const AdminProductUpdate = () => {
     }
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const formData = new FormData();
+  //     formData.append("image", image);
+  //     formData.append("name", name);
+  //     formData.append("description", description);
+  //     formData.append("price", price);
+  //     formData.append("category", category);
+  //     formData.append("quantity", quantity);
+  //     formData.append("brand", brand);
+  //     formData.append("countInStock", stock);
+
+  //     // Update product using the RTK Query mutation
+  //     const data = await updateProduct({ productId: params._id, formData });
+
+  //     if (data?.error) {
+  //       toast.error(data.error, {
+  //         position: toast.POSITION.TOP_RIGHT,
+  //         autoClose: 2000,
+  //       });
+  //     } else {
+  //       toast.success(`Product successfully updated`, {
+  //         position: toast.POSITION.TOP_RIGHT,
+  //         autoClose: 2000,
+  //       });
+  //       navigate("/admin/allproductslist");
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //     toast.error("Product update failed. Try again.", {
+  //       position: toast.POSITION.TOP_RIGHT,
+  //       autoClose: 2000,
+  //     });
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const formData = new FormData();
-      formData.append("image", image);
-      formData.append("name", name);
-      formData.append("description", description);
-      formData.append("price", price);
-      formData.append("category", category);
-      formData.append("quantity", quantity);
-      formData.append("brand", brand);
-      formData.append("countInStock", stock);
-
-      // Update product using the RTK Query mutation
-      const data = await updateProduct({ productId: params._id, formData });
-
-      if (data?.error) {
-        toast.error(data.error, {
+      const updatedProduct = {
+        name,
+        description,
+        price,
+        category,
+        quantity,
+        brand,
+        image,
+        countInStock: stock,
+      };
+  
+      // API call
+      const response = await updateProduct({
+        productId: params._id,
+        ...updatedProduct,
+      });
+  
+      if (response?.error) {
+        toast.error(response.error.data.message || "Update failed", {
           position: toast.POSITION.TOP_RIGHT,
           autoClose: 2000,
         });
       } else {
-        toast.success(`Product successfully updated`, {
+        toast.success("Product successfully updated", {
           position: toast.POSITION.TOP_RIGHT,
           autoClose: 2000,
         });
         navigate("/admin/allproductslist");
       }
     } catch (err) {
-      console.log(err);
+      console.error(err);
       toast.error("Product update failed. Try again.", {
         position: toast.POSITION.TOP_RIGHT,
         autoClose: 2000,
       });
     }
   };
+  
 
   const handleDelete = async () => {
     try {
