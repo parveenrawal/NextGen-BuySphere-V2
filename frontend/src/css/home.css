@@ -1,0 +1,224 @@
+* {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  nav {
+    height:rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    align-items: center;
+    /* border-bottom: 2px solid rgb(237, 237, 237); */
+  }
+  
+  .logo {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-top: -0.5rem;
+    cursor: pointer;
+    /* border: 2px solid white; */
+  }
+  
+  .menu {
+    /* border: 2px solid white; */
+  }
+  
+  .menu ul li {
+    color: white;
+    list-style: none;
+    float: left;
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 1.5rem;
+  }
+  
+  .cartTxt {
+    display: flex;
+  }
+  
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    font-size: 3.2rem;
+    color: white;
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+  
+  .loginBtn {
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color:black;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin-top: .2rem;
+  }
+  
+  
+  .hero {
+    padding: 10rem 5rem;
+    background-size: cover;
+    background-position: right;
+    height: 80vh;
+  }
+  
+  .hero-txt {
+    width: 60.5rem;
+    background: linear-gradient(
+      94deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(14, 14, 14, 1) 57%,
+      rgba(0, 212, 255, 0) 100%
+    );
+    /* height:178px; */
+  }
+  
+  .heroHeading {
+    font-size: 5.8rem;
+    font-weight: 800;
+    line-height: 6rem;
+    color: #ffa602;
+    margin-top: 5.5rem;
+  }
+  
+  .boldTxt {
+    font-weight: 700;
+  }
+  
+  .hero-up {
+    width: 643;
+    height: 276;
+    font-size: 64px;
+    line-height: 80px;
+    /* margin:40px auto 20px auto   */
+  }
+  
+  .heroPera {
+    line-height: 2.7rem;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    color: white;
+  }
+  
+  /* Category section style is start from here -----xxxxxx----- */
+  
+  .category {
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden; */
+  }
+  
+  .section-txt {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgb(225, 225, 225);
+  }
+  
+  .bnrBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+  }
+  
+  .bnrBox div {
+    width: 40rem;
+    height: 20rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* border: 2px solid green; */
+    margin: 0.2rem;
+    z-index: -1;
+  }
+  
+  .bnrBox div span {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    margin: 5rem auto;
+    justify-content: center;
+  }
+  
+  /*  -----xxxxxx----- featured--section styling is start from here -----xxxxxxxx------- */
+  
+  .ftProduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .boxContainer {
+    width: 90rem;
+    margin: 3rem auto;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    /* border: 2px solid white; */
+    /* background-color: rgb(215, 214, 214); */
+  }
+  
+  .box {
+    width: 20rem;
+    margin: 1.5rem auto;
+  }
+  
+  .box img {
+    width: 25rem;
+    border-radius: 1.3rem;
+  }
+  
+  /* ad-banner section styling start from here -----xxxx----  */
+  .adBanner {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10rem 0 0 0;
+    padding: 8rem 0.5rem;
+    background-size: 120%;
+    background-position: 0% 62%;
+  }
+  
+  .adBanner div {
+    width: 45rem;
+    /* border: 2px solid black; */
+  }
+  
+  .adTxt {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: white;
+  }
+  
+  .headTri {
+    font-size: 3.8rem;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .bnDis {
+    font-size: 1.2rem;
+    text-align: justify;
+    color: white;
+  }
+  
+  .btnSec {
+    /* background-color: black; */
+    color: white;
+    width: 18rem;
+    height: 4rem;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    margin-top: 1.3rem;
+    cursor: pointer;
+  }
+  
