@@ -33,7 +33,7 @@ const addProduct = asyncHandler(async (req, res) => {
 
 const updateProductDetails = asyncHandler(async (req, res) => {
   try {
-    const { name, description, price, category, quantity, brand } = req.fields;
+    const { name, description, price, category, quantity, brand, image, countInStock } = req.body;
 
     // Validation
     switch (true) {
@@ -53,18 +53,21 @@ const updateProductDetails = asyncHandler(async (req, res) => {
 
     const product = await Product.findByIdAndUpdate(
       req.params.id,
-      { ...req.fields },
+      { name, description, price, category, quantity, brand, image, countInStock },
       { new: true }
     );
 
-    await product.save();
+    if (!product) {
+      return res.status(404).json({ error: "Product not found" });
+    }
 
-    res.json(product);
+    res.json({ message: "Product updated successfully", product });
   } catch (error) {
     console.error(error);
-    res.status(400).json(error.message);
+    res.status(400).json({ error: error.message });
   }
 });
+
 
 const removeProduct = asyncHandler(async (req, res) => {
   try {
@@ -123,7 +126,7 @@ const fetchAllProducts = asyncHandler(async (req, res) => {
   try {
     const products = await Product.find({})
       .populate("category")
-      .limit(12)
+      .limit(100)
       .sort({ createAt: -1 });
 
     res.json(products);

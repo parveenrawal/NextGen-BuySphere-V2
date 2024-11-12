@@ -4,7 +4,7 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import Header from "../components/Header";
 import Product from "./Products/Product";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+
 
 import "../css/home.css";;
 
